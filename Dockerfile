@@ -1,4 +1,5 @@
-FROM node:18
+# Étape 1 : build de l'app React
+FROM node:18 AS build
 
 WORKDIR /app
 
@@ -9,4 +10,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD["npm","start"]
+CMD ["npm", "start"]
